@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaShopMaui.LoginPage"
+             Title="LoginPage">
+    <VerticalStackLayout>
+      <Image Source="shop_login.png" WidthRequest="150" HeightRequest="150" Margin="50" />
+
+      <Entry 
+				Placeholder="Username"
+        TextColor="#000"
+        x:Name="txtUserName"
+        PlaceholderColor="#154360"
+      />
+
+      <Entry 
+				IsPassword="True"
+        TextColor="#000"
+        x:Name="txtPassword"
+        Placeholder="Password"
+        PlaceholderColor="#154360"
+			/>
+      
+      <Button 
+        Margin="30"
+				VerticalOptions="Center" 
+				Text="Login"
+        TextColor="#154360"
+        BackgroundColor="Transparent"
+        BorderColor="#154360"
+        BorderWidth="1.5"
+        CornerRadius="5"
+        FontAttributes="Bold"
+        FontSize="Large"
+      />
+    </VerticalStackLayout>
+</ContentPage>
