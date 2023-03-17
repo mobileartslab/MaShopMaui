@@ -32,6 +32,7 @@
         CornerRadius="5"
         FontAttributes="Bold"
         FontSize="Large"
+        Clicked="Button_Clicked"
       />
     </VerticalStackLayout>
 </ContentPage>
