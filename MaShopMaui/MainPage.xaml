@@ -17,8 +17,8 @@
                 <Image Grid.RowSpan="2" 
                        Source="{Binding ImageUrl}" 
                        Aspect="AspectFill"
-                       HeightRequest="60" 
-                       WidthRequest="60" />
+                       HeightRequest="200" 
+                       WidthRequest="200" />
                 <Label Grid.Column="1" 
                        Text="{Binding Name}"
                        TextColor="Teal"
@@ -64,7 +64,7 @@
         <mashopmaui:MonkeyDataTemplateSelector 
 			    x:Key="MonkeySelector"
           AmericanMonkey="{StaticResource AmericanMonkeyTemplate}"
-          OtherMonkey="{StaticResource OtherMonkeyTemplate}" 
+          OtherMonkey="{StaticResource AmericanMonkeyTemplate}" 
 	   		/>
     </ContentPage.Resources>
     
