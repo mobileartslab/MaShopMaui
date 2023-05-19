@@ -1,42 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MaShopMaui.MainPage">
-
-    <ScrollView>
+<ContentPage 
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:mashopmaui="clr-namespace:MaShopMaui"
+  x:Class="MaShopMaui.MainPage"
+>
+  <ContentPage.Resources>
+    <DataTemplate x:Key="AmericanInventoryTemplate">
+      <Border
+	      Stroke="White"
+	      Background="White"
+	      StrokeThickness="2"
+        Margin="10"
+ 		  >
+	      <Border.StrokeShape>
+		      <RoundRectangle CornerRadius="20,20,20,20"/>
+	      </Border.StrokeShape>
+        <Border.Shadow>
+          <Shadow 
+						Brush="Black"
+            Offset="20,20"
+            Radius="20"
+            Opacity="0.8" 
+		  		/>
+        </Border.Shadow>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+          Padding="10"
+				>
+          <Image
+            Source="{Binding ImageUrl}" 
+              HeightRequest="300" 
+					/>
+          <Label 
+            Text="{Binding Category}"
+            TextColor="Gray"
+            FontAttributes="Bold" 
+            Margin="0, 20,0, 10"
+            FontSize="Medium"
+					/>
+          <Label 
+            Text="{Binding Headline}"
+            FontAttributes="Bold" 
+            FontSize="Subtitle"
+					/>
+          <Label 
+            Text="{Binding SubHeadline}"
+            TextColor="Gray"
+					/>
+          <Label 
+            Margin="0, 10,0, 10"
+            Text="{Binding Content}"
+					/>
+				</VerticalStackLayout>
+       </Border>
+     </DataTemplate>
+        
+     <mashopmaui:InventoryDataTemplateSelector 
+		   x:Key="InventorySelector"
+       AmericanInventory="{StaticResource AmericanInventoryTemplate}"
+       OtherInventory="{StaticResource AmericanInventoryTemplate}" 
+	  	/>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout
+  	>
+      <CollectionView 
+			  ItemsSource="{Binding Inventorys}"
+        ItemTemplate="{StaticResource InventorySelector}" 
+			/>
+    </VerticalStackLayout>
 
 </ContentPage>
 
