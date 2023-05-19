@@ -70,65 +70,73 @@ namespace MaShopMaui
     {
       source.Add(new Monkey
       {
-        Name = "GIBSON",
-        Location = "Les Paul Custom - Ebony with Ebony Fingerboard",
-        Details = "Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae.",
+        Category = "GIBSON",
+        Headline = "Les Paul Custom - Ebony with Ebony Fingerboard",
+        SubHeadline = "The One, the Only Les Paul Custom",
+        Content = "With its sonic punch, fluid playability, and classic \"tuxedo\" appointments, the Les Paul Custom is equal parts elegance and brute strength. Fitted with a matched 490/498 humbucker set that takes you from mellow jazz tones to full shred with a pinky twist, this majestic beast is ultra-responsive to your touch. Its fast-action neck, smooth-as-silk ebony fingerboard, and medium jumbo frets facilitate the speedy, dexterous fretwork we\'ve heard across prog, fusion, and hard rock genres from guitar virtuosos like Robert Fripp, Al Di Meola, and Zakk Wylde. Gibson\'s Custom Shop luthiers selected premium mahogany for the body and capped it with a 2-piece carved maple top — a classic recipe for rich, sustaining, articulate tone that\'ll slice right through the mix.",
         ImageUrl = "lp1.png"
       });
 
       source.Add(new Monkey
       {
-        Name = "GIBSON",
-        Location = "Slash Les Paul Standard Electric Guitar - November Burst",
-        Details = "The capuchin monkeys are New World monkeys of the subfamily Cebinae. Prior to 2011, the subfamily contained only a single genus, Cebus.",
+        Category = "GIBSON",
+        Headline = "Slash Les Paul Standard Electric Guitar - November Burst",
+        SubHeadline = "Whet Your Appetite with Slash\'s Signature Gibson Les Paul Standard",
+        Content = "Part of Gibson\'s Slash Collection, the Slash Les Paul Standard is a solidbody electric guitar that\'s worthy of its namesake. Inject your playing with incredible warmth and sustain, thanks to a resonant solid mahogany body, that\'s accented by an eye-catching AAA figured maple top. Enjoy unbelievable playability, courtesy of a comfortable rosewood-capped \"C\"-shaped neck. And when you plug into your British stack, you\'ll experience a mid-forward sustain and crunch that every Slash fan is sure to recognize, by virtue of dual Custom Burstbucker Alnico II pickups. The Slash Les Paul Standard sports handwired electronics, color-coordinated hardware, and a bevy of special Slash-approved touches.",
         ImageUrl = "lp2.png"
       });
 
       source.Add(new Monkey
       {
-        Name = "GIBSON",
-        Location = "Les Paul Standard \'60s Electric Guitar - Iced Tea",
-        Details = "The squirrel monkeys are the New World monkeys of the genus Saimiri. They are the only genus in the subfamily Saimirinae. The name of the genus Saimiri is of Tupi origin, and was also used as an English name by early researchers.",
+        Category = "GIBSON",
+        Headline = "Les Paul Standard \'60s Electric Guitar - Iced Tea",
+        SubHeadline = "Burstbucker pickups deliver vintage PAF tone",
+        Content = "When it comes to capturing vintage Patent Applied For (PAF) humbucker tone, nothing beats the sound of this Les Paul Standard 60\'s Burstbucker pickups. These magnets — along with period-correct unmatched windings on the bobbins — capture the subtle historical variations in true humbucker tone. Plug into your favorite amp, and experience smooth low-end response, complex midrange crunch, and sweet-sounding highs. These pickups sound great clean or they can be used to push your amp into overdrive for the legendary fat, snarling tone you can only get with a humbucker. Under the hood, the control assembly is handwired with matched potentiometers and Orange Drop capacitors, ensuring that you\'ll hear the mellifluous voice of your Les Paul Standard \'60s in all its glory, even when you back down your volume. It\'s all driven by a nimble 3-way toggle switch for lightning-fast access to those glorious heritage tones.",
         ImageUrl = "lp3.png"
       });
 
       source.Add(new Monkey
       {
-        Name = "GIBSON",
-        Location = "Les Paul Standard \'50s Electric Guitar - Gold Top",
-        Details = "The golden lion tamarin also known as the golden marmoset, is a small New World monkey of the family Callitrichidae.",
+        Category = "GIBSON",
+        Headline = "Les Paul Standard \'50s Electric Guitar - Gold Top",
+        SubHeadline = "Les Paul Standard \'50s: Born to Rock",
+        Content = "Les Paul Standard \'50s: Born to Rock\", content: \"From its carved maple top to its stockpile of premium features, the Gibson Les Paul Standard \'50s is ready to rock. Burstbucker pickups and handwired electronics deliver a massive tone arsenal. And you\\'ll enjoy effortless playability courtesy of a satisfying vintage \'50s profile neck and fast-action rosewood fingerboard. If you\'ve been wanting a modern Les Paul with a chunky neck feel and premium appointments, Sweetwater has your axe. The Gibson Les Paul Standard \'50s is the guitar you\'ve been waiting for.",
         ImageUrl = "lp4.png"
       });
 
       source.Add(new Monkey
       {
-        Name = "GIBSON",
-        Location = "Les Paul Standard \'60s Electric Guitar - Bourbon Burst",
-        Details = "Howler monkeys are among the largest of the New World monkeys. Fifteen species are currently recognised. Previously classified in the family Cebidae, they are now placed in the family Atelidae.",
+        Category = "GIBSON",
+        Headline = "Les Paul Standard \'60s Electric Guitar - Bourbon Burst",
+        SubHeadline = "Les Paul Standard \'60s: Born to Rock",
+        Content = " From its carved maple top to its stockpile of premium features, the Gibson Les Paul Standard \'60s is ready to rock. 60s Burstbucker pickups and handwired electronics deliver a massive tone arsenal. And you\\'ll enjoy effortless playability courtesy of a fast SlimTaper-profile neck and silky-smooth rosewood fingerboard with Plek\'d frets. If you\'ve been wanting a modern Les Paul with a slinky \'60s feel and premium appointments, Sweetwater has your axe. The Gibson Les Paul Standard \'60s is the guitar you\'ve been waiting for.",
         ImageUrl = "lp5.png"
       });
 
       source.Add(new Monkey
       {
-        Name = "EPIPHONE",
-        Location = "Les Paul Classic Electric Guitar - Heritage Cherry Sunburst",
-        Details = "The Japanese macaque, is a terrestrial Old World monkey species native to Japan. They are also sometimes known as the snow monkey because they live in areas where snow covers the ground for months each",
+        Category = "EPIPHONE",
+        Headline = "Les Paul Classic Electric Guitar - Heritage Cherry Sunburst",
+        SubHeadline = "Classic Looks and a Killer Sound",
+        Content = "Modeled after Les Paul Standards produced in the late 1950s, the Epiphone Les Paul Classic has timeless visual appeal. And its modern appointments contribute to a stellar sounding LP that plays great but won\'t break the bank. Guitarists at Sweetwater were impressed by the Epiphone Les Paul Classic\'s balanced tone that evokes the sound and vibe of countless classic and modern rock hits. And, they were blown away by the super-hot Alnico Classic PRO pickups and the premium hardware and electronics package that make this guitar a total tone monster. For a legendary look and a killer sound, wrap your hands around the Les Paul Classic from Epiphone.",
         ImageUrl = "lp6.png"
       });
 
       source.Add(new Monkey
       {
-        Name = "GIBSON",
-        Location = "Les Paul Classic: Iconic Tone and Uncompromising Playability",
-        Details = "The mandrill is a primate of the Old World monkey family, closely related to the baboons and even more closely to the drill. It is found in southern Cameroon, Gabon, Equatorial Guinea, and Congo.",
+        Category = "GIBSON",
+        Headline = "Les Paul Classic: Iconic Tone and Uncompromising Playability",
+        SubHeadline = "Les Paul Classic: Iconic Tone and Uncompromising Playability",
+        Content = "Strap on Gibson\'s Les Paul Classic, and you\'ll experience iconic tone and uncompromising playability. A time-tested combination of maple and mahogany serves up the tone that\'s fueled a million rock anthems, while 60s Burstbucker pickups inject your playing with loads of midrange muscle and sizzling overtones. You also get coil tapping, phase reversal, and pure bypass options for an endless variety of tonal textures. As for playing comfort, the Les Paul Classic feels as amazing as it sounds, thanks to a SlimTaper neck and easy-playing rosewood fingerboard. The Les Paul Classic includes a self-lubricating Graph Tech nut, Tune-o-matic bridge, vintage-style Grover Rotomatic tuners, and gold top hat knobs.",
         ImageUrl = "lp7.png"
       });
 
       source.Add(new Monkey
       {
-        Name = "GIBSON",
-        Location = "Les Paul Studio - Ebony",
-        Details = "The proboscis monkey or long-nosed monkey, known as the bekantan in Malay, is a reddish-brown arboreal Old World monkey that is endemic to the south-east Asian island of Borneo.",
+        Category = "GIBSON",
+        Headline = "Les Paul Studio - Ebony",
+        SubHeadline = "Weight-relieved, Coil-tapped Gibson Les Paul Studio with Endless Player Potential",
+        Content = "The Gibson Les Paul Studio is celebrated by live performers and session players alike. The modern Studio covers even wider sonic territory with its coil-tapped 490R/498T humbucking pickups. This combination unlocks plenty of creative textures to flesh out musical ideas, from classic cleans and modern crunch to single-coil cluck. The Gibson Les Paul Studio also benefits from an Ultra-modern weight-relieved body; this reduction of more than a pound in weight provides extra comfort for extended sessions and performances. A feature your fingers will thank you for is the SlimTaper mahogany guitar neck, which re-creates the speed and playability some of the \'60s Les Pauls are known for. Dependable Grover Rotomatic tuners keep this Gibson Les Paul Studio pitch-perfect and ready to rock.",
         ImageUrl = "lp8.png"
       });
 
@@ -137,7 +145,7 @@ namespace MaShopMaui
 
     void FilterItems(string filter)
     {
-      var filteredItems = source.Where(monkey => monkey.Name.ToLower().Contains(filter.ToLower())).ToList();
+      var filteredItems = source.Where(monkey => monkey.Category.ToLower().Contains(filter.ToLower())).ToList();
       foreach (var monkey in source)
       {
         if (!filteredItems.Contains(monkey))
@@ -156,7 +164,7 @@ namespace MaShopMaui
 
     void MonkeySelectionChanged()
     {
-      SelectedMonkeyMessage = $"Selection {selectionCount}: {SelectedMonkey.Name}";
+      SelectedMonkeyMessage = $"Selection {selectionCount}: {SelectedMonkey.Category}";
       OnPropertyChanged("SelectedMonkeyMessage");
       selectionCount++;
     }
@@ -177,9 +185,9 @@ namespace MaShopMaui
     #region INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
 
-    void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    void OnPropertyChanged([CallerMemberName] string propertyCategory = null)
     {
-      PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+      PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyCategory));
     }
     #endregion
   }

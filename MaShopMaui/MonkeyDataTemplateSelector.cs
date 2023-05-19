@@ -9,7 +9,7 @@ namespace MaShopMaui
 
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-      return ((Monkey)item).Location.Contains("America") ? AmericanMonkey : OtherMonkey;
+      return ((Monkey)item).Headline.Contains("America") ? AmericanMonkey : OtherMonkey;
     }
   }
 }
