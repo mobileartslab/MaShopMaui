@@ -6,7 +6,7 @@
   x:Class="MaShopMaui.MainPage"
 >
   <ContentPage.Resources>
-    <DataTemplate x:Key="AmericanMonkeyTemplate">
+    <DataTemplate x:Key="AmericanInventoryTemplate">
       <Border
 	      Stroke="White"
 	      Background="White"
@@ -55,18 +55,18 @@
        </Border>
      </DataTemplate>
         
-     <mashopmaui:MonkeyDataTemplateSelector 
-		   x:Key="MonkeySelector"
-       AmericanMonkey="{StaticResource AmericanMonkeyTemplate}"
-       OtherMonkey="{StaticResource AmericanMonkeyTemplate}" 
+     <mashopmaui:InventoryDataTemplateSelector 
+		   x:Key="InventorySelector"
+       AmericanInventory="{StaticResource AmericanInventoryTemplate}"
+       OtherInventory="{StaticResource AmericanInventoryTemplate}" 
 	  	/>
     </ContentPage.Resources>
     
     <VerticalStackLayout
   	>
       <CollectionView 
-			  ItemsSource="{Binding Monkeys}"
-        ItemTemplate="{StaticResource MonkeySelector}" 
+			  ItemsSource="{Binding Inventorys}"
+        ItemTemplate="{StaticResource InventorySelector}" 
 			/>
     </VerticalStackLayout>
 

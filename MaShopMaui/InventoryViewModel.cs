@@ -5,70 +5,70 @@ using System.Windows.Input;
 
 namespace MaShopMaui
 {
-  public class MonkeysViewModel : INotifyPropertyChanged
+  public class InventoryViewModel : INotifyPropertyChanged
   {
-    readonly IList<Monkey> source;
-    Monkey selectedMonkey;
+    readonly IList<Inventory> source;
+    Inventory selectedInventory;
     int selectionCount = 1;
 
-    public ObservableCollection<Monkey> Monkeys { get; private set; }
-    public IList<Monkey> EmptyMonkeys { get; private set; }
+    public ObservableCollection<Inventory> Inventorys { get; private set; }
+    public IList<Inventory> EmptyInventorys { get; private set; }
 
-    public Monkey SelectedMonkey
+    public Inventory SelectedInventory
     {
       get
       {
-        return selectedMonkey;
+        return selectedInventory;
       }
       set
       {
-        if (selectedMonkey != value)
+        if (selectedInventory != value)
         {
-          selectedMonkey = value;
+          selectedInventory = value;
         }
       }
     }
 
-    ObservableCollection<object> selectedMonkeys;
-    public ObservableCollection<object> SelectedMonkeys
+    ObservableCollection<object> selectedInventorys;
+    public ObservableCollection<object> SelectedInventorys
     {
       get
       {
-        return selectedMonkeys;
+        return selectedInventorys;
       }
       set
       {
-        if (selectedMonkeys != value)
+        if (selectedInventorys != value)
         {
-          selectedMonkeys = value;
+          selectedInventorys = value;
         }
       }
     }
 
-    public string SelectedMonkeyMessage { get; private set; }
+    public string SelectedInventoryMessage { get; private set; }
 
-    public ICommand DeleteCommand => new Command<Monkey>(RemoveMonkey);
-    public ICommand FavoriteCommand => new Command<Monkey>(FavoriteMonkey);
+    public ICommand DeleteCommand => new Command<Inventory>(RemoveInventory);
+    public ICommand FavoriteCommand => new Command<Inventory>(FavoriteInventory);
     public ICommand FilterCommand => new Command<string>(FilterItems);
-    public ICommand MonkeySelectionChangedCommand => new Command(MonkeySelectionChanged);
+    public ICommand InventorySelectionChangedCommand => new Command(InventorySelectionChanged);
 
-    public MonkeysViewModel()
+    public InventoryViewModel()
     {
-      source = new List<Monkey>();
-      CreateMonkeyCollection();
+      source = new List<Inventory>();
+      CreateInventoryCollection();
 
-      selectedMonkey = Monkeys.Skip(3).FirstOrDefault();
-      MonkeySelectionChanged();
+      selectedInventory = Inventorys.Skip(3).FirstOrDefault();
+      InventorySelectionChanged();
 
-      SelectedMonkeys = new ObservableCollection<object>()
+      SelectedInventorys = new ObservableCollection<object>()
             {
-                Monkeys[1], Monkeys[3], Monkeys[4]
+                Inventorys[1], Inventorys[3], Inventorys[4]
             };
     }
 
-    void CreateMonkeyCollection()
+    void CreateInventoryCollection()
     {
-      source.Add(new Monkey
+      source.Add(new Inventory
       {
         Category = "GIBSON",
         Headline = "Les Paul Custom - Ebony with Ebony Fingerboard",
@@ -77,7 +77,7 @@ namespace MaShopMaui
         ImageUrl = "lp1.png"
       });
 
-      source.Add(new Monkey
+      source.Add(new Inventory
       {
         Category = "GIBSON",
         Headline = "Slash Les Paul Standard Electric Guitar - November Burst",
@@ -86,7 +86,7 @@ namespace MaShopMaui
         ImageUrl = "lp2.png"
       });
 
-      source.Add(new Monkey
+      source.Add(new Inventory
       {
         Category = "GIBSON",
         Headline = "Les Paul Standard \'60s Electric Guitar - Iced Tea",
@@ -95,7 +95,7 @@ namespace MaShopMaui
         ImageUrl = "lp3.png"
       });
 
-      source.Add(new Monkey
+      source.Add(new Inventory
       {
         Category = "GIBSON",
         Headline = "Les Paul Standard \'50s Electric Guitar - Gold Top",
@@ -104,7 +104,7 @@ namespace MaShopMaui
         ImageUrl = "lp4.png"
       });
 
-      source.Add(new Monkey
+      source.Add(new Inventory
       {
         Category = "GIBSON",
         Headline = "Les Paul Standard \'60s Electric Guitar - Bourbon Burst",
@@ -113,7 +113,7 @@ namespace MaShopMaui
         ImageUrl = "lp5.png"
       });
 
-      source.Add(new Monkey
+      source.Add(new Inventory
       {
         Category = "EPIPHONE",
         Headline = "Les Paul Classic Electric Guitar - Heritage Cherry Sunburst",
@@ -122,7 +122,7 @@ namespace MaShopMaui
         ImageUrl = "lp6.png"
       });
 
-      source.Add(new Monkey
+      source.Add(new Inventory
       {
         Category = "GIBSON",
         Headline = "Les Paul Classic: Iconic Tone and Uncompromising Playability",
@@ -131,7 +131,7 @@ namespace MaShopMaui
         ImageUrl = "lp7.png"
       });
 
-      source.Add(new Monkey
+      source.Add(new Inventory
       {
         Category = "GIBSON",
         Headline = "Les Paul Studio - Ebony",
@@ -140,46 +140,46 @@ namespace MaShopMaui
         ImageUrl = "lp8.png"
       });
 
-      Monkeys = new ObservableCollection<Monkey>(source);
+      Inventorys = new ObservableCollection<Inventory>(source);
     }
 
     void FilterItems(string filter)
     {
-      var filteredItems = source.Where(monkey => monkey.Category.ToLower().Contains(filter.ToLower())).ToList();
-      foreach (var monkey in source)
+      var filteredItems = source.Where(inventory => inventory.Category.ToLower().Contains(filter.ToLower())).ToList();
+      foreach (var inventory in source)
       {
-        if (!filteredItems.Contains(monkey))
+        if (!filteredItems.Contains(inventory))
         {
-          Monkeys.Remove(monkey);
+          Inventorys.Remove(inventory);
         }
         else
         {
-          if (!Monkeys.Contains(monkey))
+          if (!Inventorys.Contains(inventory))
           {
-            Monkeys.Add(monkey);
+            Inventorys.Add(inventory);
           }
         }
       }
     }
 
-    void MonkeySelectionChanged()
+    void InventorySelectionChanged()
     {
-      SelectedMonkeyMessage = $"Selection {selectionCount}: {SelectedMonkey.Category}";
-      OnPropertyChanged("SelectedMonkeyMessage");
+      SelectedInventoryMessage = $"Selection {selectionCount}: {SelectedInventory.Category}";
+      OnPropertyChanged("SelectedInventoryMessage");
       selectionCount++;
     }
 
-    void RemoveMonkey(Monkey monkey)
+    void RemoveInventory(Inventory inventory)
     {
-      if (Monkeys.Contains(monkey))
+      if (Inventorys.Contains(inventory))
       {
-        Monkeys.Remove(monkey);
+        Inventorys.Remove(inventory);
       }
     }
 
-    void FavoriteMonkey(Monkey monkey)
+    void FavoriteInventory(Inventory inventory)
     {
-      monkey.IsFavorite = !monkey.IsFavorite;
+      inventory.IsFavorite = !inventory.IsFavorite;
     }
 
     #region INotifyPropertyChanged

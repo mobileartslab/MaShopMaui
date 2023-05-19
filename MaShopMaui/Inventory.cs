@@ -1,7 +1,7 @@
 ﻿using System;
 namespace MaShopMaui
 {
-  public class Monkey
+  public class Inventory
   {
     public string Category { get; set; }
     public string Headline { get; set; }
