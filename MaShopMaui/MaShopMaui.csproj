@@ -64,6 +64,8 @@
 	  <None Remove="Resources\Images\lp5.png" />
 	  <None Remove="Resources\Images\lp4.png" />
 	  <None Remove="Resources\Images\lp2.png" />
+	  <None Remove="Services\" />
+	  <None Remove="Models\" />
 	</ItemGroup>
 	<ItemGroup>
     <MauiIcon Include="Resources\AppIcon\appicon.svg">
@@ -89,5 +91,9 @@
 		  <BundleResource Include="Resources\Images\lp5.png" />
 		  <BundleResource Include="Resources\Images\lp4.png" />
 		  <BundleResource Include="Resources\Images\lp2.png" />
+		</ItemGroup>
+		<ItemGroup>
+		  <Folder Include="Services\" />
+		  <Folder Include="Models\" />
 		</ItemGroup>
 </Project>

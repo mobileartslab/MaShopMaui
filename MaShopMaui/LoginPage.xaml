@@ -2,27 +2,75 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MaShopMaui.LoginPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="LoginPage">
-    <VerticalStackLayout>
+    <VerticalStackLayout Margin="20" Spacing="5">
+
       <Image Source="shop_login.png" WidthRequest="150" HeightRequest="150" Margin="50" />
 
       <Entry 
 				Placeholder="Username"
         TextColor="#000"
-        x:Name="txtUserName"
+        x:Name="username"
         PlaceholderColor="#154360"
-      />
-
+        Keyboard="Email"
+      >
+        <Entry.Behaviors>
+          <toolkit:MultiValidationBehavior 
+            x:Name="emailValidator"
+            Flags="ValidateOnAttaching,ValidateOnValueChanged">
+            <toolkit:TextValidationBehavior                                
+              Flags="ValidateOnAttaching,ValidateOnValueChanged"
+              MinimumLength="1"
+              toolkit:MultiValidationBehavior.Error="Email is required."
+            />
+            <toolkit:EmailValidationBehavior 
+              Flags="ValidateOnAttaching,ValidateOnValueChanged" 
+              toolkit:MultiValidationBehavior.Error="Email format is invalid."/>
+            </toolkit:MultiValidationBehavior>
+        </Entry.Behaviors>
+      </Entry>
+      <Label 
+        x:Name="usernameError"
+        TextColor="#ff0000"
+        FontSize="Small"
+        Margin="0, 0, 0, 15"
+        MinimumHeightRequest="19"
+			/>
       <Entry 
 				IsPassword="True"
         TextColor="#000"
-        x:Name="txtPassword"
+        x:Name="password"
         Placeholder="Password"
         PlaceholderColor="#154360"
+			>
+       <Entry.Behaviors>
+          <toolkit:TextValidationBehavior
+            x:Name="passwordValidator"                            
+            Flags="ValidateOnAttaching,ValidateOnValueChanged"
+            MinimumLength="1"
+          />
+        </Entry.Behaviors>
+      </Entry>
+      <Label 
+        x:Name="passwordError"
+        TextColor="#ff0000"
+        FontSize="Small"
+        Margin="0, 0, 0, 15"
+        MinimumHeightRequest="19"
+			/>
+
+      <Label 
+        x:Name="submitError"
+        TextColor="#ff0000"
+        FontSize="Small"
+        Margin="0, 0, 0, 15"
+        HorizontalTextAlignment="Center"
+        MinimumHeightRequest="19"
 			/>
       
       <Button 
-        Margin="30"
+        Margin="30, 20, 30, 30"
 				VerticalOptions="Center" 
 				Text="Login"
         TextColor="#154360"
@@ -36,3 +84,4 @@
       />
     </VerticalStackLayout>
 </ContentPage>
+
